@@ -3,6 +3,7 @@
 int Compressor::compress(const std::string& inpPath, const std::string& outPath, char method, bool useBWT)
 {
 	std::shared_ptr<std::vector<char>> inpData = FileAccessor::GetSymbVectPtr(inpPath);
+	if (!inpData) return -1;
 	std::shared_ptr<std::vector<char>> outData;
 	std::shared_ptr<std::vector<char>> BWTData;
 
@@ -51,7 +52,7 @@ int Compressor::compress(const std::string& inpPath, const std::string& outPath,
 
 int Compressor::decompress(const std::string& inpPath, const std::string& outPath, char method, bool useBWT)
 {
-	std::shared_ptr<std::vector<char>> inpData = FileAccessor::GetSymbVectPtr(inpPath);
+	//std::shared_ptr<std::vector<char>> inpData = FileAccessor::GetSymbVectPtr(inpPath);
 	std::shared_ptr<std::vector<char>> outData;
 	std::shared_ptr<std::vector<char>> BWTData;
 

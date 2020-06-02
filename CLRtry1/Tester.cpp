@@ -7,6 +7,7 @@ std::string Tester::GetTesting(std::string inpPath, char method, bool useBWT)
 	//std::string outPath = ("../Compressed/testingFileOut");
 	std::string outPath = ("../CompressedFiles/testingFileOut");
 	std::shared_ptr<std::vector<char>> inpData = FileAccessor::GetSymbVectPtr(inpPath);
+	if (!inpData) return "failed to open input file";
 	std::shared_ptr<std::vector<char>> outData;
 	std::shared_ptr<std::vector<char>> BWTData;
 	std::string result;
