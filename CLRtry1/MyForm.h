@@ -54,6 +54,7 @@ namespace CLRtry1 {
 	private: System::Windows::Forms::Button^  buttonDecompress;
 	private: System::Windows::Forms::Button^  buttonTest;
 	private: System::Windows::Forms::Label^  labelTestResult;
+	private: System::Windows::Forms::Label^  label3;
 
 
 
@@ -84,6 +85,7 @@ namespace CLRtry1 {
 			this->buttonDecompress = (gcnew System::Windows::Forms::Button());
 			this->buttonTest = (gcnew System::Windows::Forms::Button());
 			this->labelTestResult = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// buttonSelectFile
@@ -155,6 +157,7 @@ namespace CLRtry1 {
 			this->comboBoxAlgoSelector->Name = L"comboBoxAlgoSelector";
 			this->comboBoxAlgoSelector->Size = System::Drawing::Size(61, 28);
 			this->comboBoxAlgoSelector->TabIndex = 6;
+			this->comboBoxAlgoSelector->SelectedIndex = 0;
 			// 
 			// checkBoxBWT
 			// 
@@ -199,11 +202,24 @@ namespace CLRtry1 {
 			this->labelTestResult->TabIndex = 10;
 			this->labelTestResult->Text = L"Test result";
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ControlDark;
+			this->label3->Location = System::Drawing::Point(291, 239);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(136, 13);
+			this->label3->TabIndex = 11;
+			this->label3->Text = L"Copyright Hutarevych 2020";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(434, 261);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->labelTestResult);
 			this->Controls->Add(this->buttonTest);
 			this->Controls->Add(this->buttonDecompress);
